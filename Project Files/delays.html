@@ -1,0 +1,165 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Twitter Sentiment</title>
+  <meta name="keywords" content="css3, html5, js, background video, fullscreen video">
+  <meta name="description" content="Super easy to implement HTML5 fullscreen background video library in JavaScript.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+
+    #container {
+      overflow: hidden;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    /* Demo page specific styles */
+
+    body {
+      text-align: center;
+      font-family: 'proxima-nova', Helvetica;
+      background-color: grey;
+    }
+
+    #overlay {
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    #main_content {
+      z-index: 2;
+      position: relative;
+      display: inline-block;
+
+      /* Vertical center */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #main_content h1 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: 'proxima-nova-condensed', Helvetica;
+      color: #fff;
+      font-size: 35px;
+    }
+
+    #main_content .sub_head {
+      color: rgba(255,255,255,0.5);
+      font-size: 18px;
+    }
+
+    #main_content .info {
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    #links {
+      margin-top: 50px;
+    }
+
+    #button_link {
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 61px;
+      font-size: 12px;
+      color: rgb(255, 255, 255);
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px 25px;
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    #footer {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+    }
+    #footer a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      margin: 10px;
+      font-size: 12px;
+    }
+    #footer a:first-child {
+      float: left;
+    }
+    #footer a:last-child {
+      float: right;
+    }
+    #container-fluid {
+        color: black;
+        text-decoration-color: white;
+    }
+
+    </style>
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Logo and responsive toggle -->
+        <div class="navbar-header">
+            <button id="button_link">
+                <a href="home_page/home.html" target="_blank">
+                Take me back home!
+                </a>
+            </button>
+            <button id="button_link">
+                <a href="delays.html" target="_blank">
+                On to Delays!
+                </a>
+            </button>
+            <button id="button_link">
+                <a href="closing.html" target="_blank">
+                On to PowerBI!
+                </a>
+            </button>
+        </div>
+    </div>
+</nav>
+​
+<!-- Content -->
+<div class="container">
+​
+    <!-- Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Twitter</h1>
+            <h2>Airline Sentiment Analysis</h2>
+        </div>
+    </div>
+​
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-md-4 portfolio-item">
+            <h3>Twitter Sentiment</h3>
+                <img class="img-responsive" src="Images/sentiments_bargraph.png" alt="">
+            <p>Sentiment Description</p>
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <h3>Negative Sentiment Reasons</h3>
+                <img class="img-responsive" src="Images/reasons.png" alt="">
+            <p>Negative Reasons Description</p>
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <h3>Negative WordCloud</h3>
+                <img class="img-responsive" src="Images/neg_cloud.png" alt="" width="940" height="800">
+            <p>Negative WordCloud Description</p>
+        </div>
+        <div class="col-md-4 portfolio-item">
+             <h3>Positive WordCloud</h3>
+                <img class="img-responsive" src="Images/pos_cloud.png" alt="" width="940" height="800">
+            <p>Positive WordCloud Description</p>
+        </div>
+    </div>
+
+</body>
+​
+</html>
