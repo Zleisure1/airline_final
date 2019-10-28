@@ -8,15 +8,18 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-
-    #container {
-      overflow: hidden;
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    body {
+    html{
+      font-size: 10px;
+      font-family: "Roboto Cn", sans-serif;
+    }
+    body{
       text-align: center;
-      font-family: 'proxima-nova', Helvetica;
+      overflow-x: hidden;
       background-image: url(Images/finan_center.jpg);
       height: 100vh;
       background-size: cover;
@@ -24,66 +27,121 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-    #button_link {
-      border: 2px solid rgb(0, 0, 0);
-      border-radius: 61px;
-      font-size: 12px;
-      color: rgb(255, 255, 255);
-      letter-spacing: 1px;
+    a{
       text-decoration: none;
+      color: #fff;
+    }
+    header{
+      width: 100%;
+    }
+    .container{
+      max-width: 120rem;
+      width: 90%;
+      margin: 0 auto;
+    }
+    nav{
+      padding-top: 5rem;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: right;
       text-transform: uppercase;
-      padding: 10px 25px;
-      display: inline-block;
-      margin-right: 15px;
+      font-size: 1.6rem;
     }
-    *{
-      margin: 0;
-      padding: 0;
-      font-family: Century Gothic;
+    .brand{
+      font-size: 3rem;
+      font-weight: 300;
+      transform: translateX(-100rem);
+      animation: slideIn .5s forwards;
     }
-    ul{
-      float: right;
-      list-style-type: none;
-      margin-top: 10px;
+    .brand span{
+      color: crimson;
     }
-    ul li{
-      display: inline-block;
+    nav ul{
+      display: flex;
     }
-    ul li a{
+    nav ul li{
+      list-style: none;
+      transform: translateX(100rem);
+      animation: slideIn .5s forwards;    }
+    nav ul li:nth-child(1){
+      animation-delay: 0s;
+    }
+    nav ul li:nth-child(2){
+      animation-delay: .5s;
+    }
+    nav ul li:nth-child(3){
+      animation-delay: 1s;
+    }
+    nav ul li:nth-child(4){
+      animation-delay: 1.5s;
+    }
+    nav ul li a{
+      padding: 1rem 0;
+      margin: 0 3rem;
+      position: relative;
+      letter-spacing: 2px;
+    }
+    nav ul li a:last-child{
+      margin-right: 0;
+    }
+    nav ul li a::before,
+    nav ul li a::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: crimson;
+      left: 0;
+      transform: scaleX(0);
+      transition: all .5s;
+    }
+    nav ul li a::before{
+      top: 0;
+      transform-origin: left;
+    }
+    nav ul li a::after{
+      bottom: 0;
+      transform-origin: right;
+    }
+    nav ul li a:hover::before,
+    nav ul li a:hover::after{
+      transform: scaleX(1);
+    }
+    .col-md-4 h3{
       text-decoration: none;
       color: #fff;
-      padding: 7px 20px;
-      border: 2px solid #fff;
-      transition: 0.6s ease;
-    }
-    ul li a:hover{
-      background-color: #000;
-      color: #fff;
-    }
-    .main{
-      max-width: 1200px;
-      margin: auto;
+      padding: 3px;
+      border: 5px solid #fff;    
     }
     .title{
-      left: 150px;
+      left: 35pc;
+      top: .5pc;
       position: absolute;
       text-decoration: none;
       color: rgb(255, 255, 255);
       padding: 5px 20px;
     }
-    .col-md-4 h3{
-      text-decoration: none;
+    .col-md-4 p{
       color: #fff;
-      padding: 5px;
-      border: 5px solid #fff;    }
+    }
+    @keyframes slideIn{
+      from{
 
-    </style>
+      }
+      to{
+        transform: translateX(0);
+      }
+    }
+
+  </style>
 
 
 </head>
 <body>
   <header>
-      <nav class="main">
+      <div class="container">
+        <nav>
+          <h1 class="brand"><a href="twitter.html"><span>T</span>wi<span>tt</span>er</a></h1>
           <ul>
               <!-- Logo and responsive toggle -->
               <li><a href="home_page/home.html" target="_blank">
@@ -94,14 +152,14 @@
                 On to PowerBI!</a></li>
           </ul>
         </nav>
-        <div class="title">
-            <h1>Airline Twitter Sentiment Analysis</h1>
-        </div>
-    </header>
+      </div>
+    <div class="title">
+        <h1>Airline Twitter Sentiment Analysis</h1>
+    </div>
+  </header>
 ​
 <!-- Content -->
 <div class="container">​
-    <!-- Projects Row -->
     <div class="row">
         <div class="col-md-4">
             <h3>Twitter Sentiment by Airline</h3>
