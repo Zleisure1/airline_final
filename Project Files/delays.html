@@ -115,9 +115,9 @@
       border: 5px solid #fff;    
     }
     .title{
-      left: 43pc;
+      left: 57pc;
       top: .5pc;
-      position: absolute;
+      position: center;
       text-decoration: none;
       color: rgb(255, 255, 255);
       padding: 5px 20px;
@@ -132,12 +132,21 @@
     }
     img{
       border-radius: 20px;
+      
     }
-
+    .col-md-4{
+      float:center;
+      padding: 5px;
+    }
+    /* .h3{
+      padding: 20px;
+    }  */
+    
   </style>
 
 
 </head>
+
 <body>
   <header>
       <div class="container">
@@ -160,19 +169,68 @@
   </header>
 ​
 <!-- Content -->
-<div class="container">​
-    <div class="row">
-        <div class="col-md-4">
-            <h3>Twitter Sentiment by Airline</h3>
-            <br>
-                <img class="img-responsive" src="Images/sentiments_bargraph.png" alt="">
+<!-- <div class="container">​
+  <div class="row">   
+    <div class="col-md-4">
+      <h3>Airline Size</h3>
+      <br>
+      <img class="img-responsive" src="Images/sentiments_bargraph.png" alt="">
+    </div>
+  </div> -->
+
+<!--Largest Carriers--> 
+<div class="row">  
+  <div class="col-md-4">
+      <br>
+      <h3>2015 Largest Carriers</h3>
+      <br>
+      <img src="Images/largest_airlines_chart.png" alt="" width="auto" height="auto">
+      <img src="Images/largest_airlines_table.png" alt="" width="912" height="660">    
+  </div>
+    
+  
+  <!--Total Annual Time Delayed--> 
+  <div class="row">  
+    <div class="col-md-4">
+      <br>
+      <h3>2015 Annual Total Time Delayed</h3>
+      <br>
+      <img src="Images/total_delays_all.png" alt="">
+      <img src="Images/total_delays_6.png" alt="">
+    </div>
+  </div>
+<!--Average Delay for a delayed flight-->  
+  <div class="row">  
+    <div class="col-md-4">
+      <br>
+      <h3>Average Delay for a Delayed Flight by Airline</h3>
+      <br>
+      <img src="Images/avg_delay_all.png" alt="">
+      <img src="Images/avg_delay6.png" alt="">
+    </div>
+  </div>
+  <!--Percentage on time-->  
+  <div class="row">  
+      <div class="col-md-4">
+        <br>
+        <h3>Average Percentage of Flights On Time</h3>
+        <br>
+        <img src="Images/per_on_time_all.png" alt="">
+        <img src="Images/per_on_time_6.png" alt="">
+      </div>
+    </div>
+
+
+
+
+        <!-- <div class="col-md-4">
+          <br>
+          <h3>Total Delay Time</h3>
+          <br>
+              <img class="img-responsive" src="Images/total_delays_all.png" alt="">
         </div>
-        <div class="col-md-4">
-            <br>
-            <h3>Negative Sentiment Reasons by Airline</h3>
-            <br>
-                <img class="img-responsive" src="Images/reasons.png" alt="">
-        </div>
+    </div>
+
         <div class="col-md-4">
             <br>
             <h3>Negative WordCloud</h3>
@@ -185,7 +243,7 @@
             <br>
                 <img class="img-responsive" src="Images/pos_cloud.png" alt="" width="940" height="800">
         </div>
-    </div>
+    </div> -->
 
 </body>
 ​
